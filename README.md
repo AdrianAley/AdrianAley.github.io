@@ -2,30 +2,22 @@
 
 
 
-LINUX
-* source activate root
-* source activate anaconda27r
-* source activate intelPython2
-* source activate intelPython3
-WINDOWS
-* activate root
-* activate anacondaDev
-* activate intelPython2
-* activate intelPython3
-BOTH
-* conda install -c intel ‘package’
+	Python Commands (ANACONDA DIST)
+* source activate <env> (LINUX)
+* activate root <env> (WINDOWS)
+* conda install -c intel <package>
 * pip list --outdated | cut -d ' ' -f1 | xargs -n1 pip install -U
 * conda update --all
-* conda config --add channels ‘channel’
-* conda create -n ‘name’ intelpython2_full python=2
-* conda create -n ‘name’ intelpython3_full python=3
-* conda install ‘package’ -c ‘channel’ --no-update-deps
+* conda config --add channels <channel>
+* conda create -n <name> intelpython2_full python=2
+* conda create -n <name> intelpython3_full python=3
+* conda install <package> -c <channel> --no-update-deps
 * conda update -c defaults --override-channels –all
 * conda update -c intel --override-channels --all
 * conda clean --all
-* conda create --name ‘name’ python=’version’
+* conda create --name <name> python=<version>
 * conda env list
-* conda create --clone ‘name’ --name ‘new-name’
+* conda create --clone <name> --name <new-name>
 * conda list
 * conda list --revisions
 * which -a python
@@ -35,18 +27,18 @@ BOTH
 * https://docs.anaconda.com/anaconda/packages/pkg-docs
 
 	System Services (Ubuntu)
-* systemctl start ‘service’
-* systemctl stop ‘service’
-* systemctl restart ‘service’
-* systemctl enable ‘service’
-* systemctl disable ‘service’
+* systemctl start <service>
+* systemctl stop <service>
+* systemctl restart <service>
+* systemctl enable <service>
+* systemctl disable <service>
 * systemctl daemon-reload
 * systemctl restart-failed
 * service --status-all
 
 	System Maintenance (Ubuntu)
 * sudo -i
-* sudo apt-get install ‘package’
+* sudo apt-get install <package>
 * sudo apt-get upgrade
 * sudo apt-fast update
 * sudo apt autoremove
@@ -98,18 +90,18 @@ COMMAND PROMPT
 * bcdedit /set hypervisorlaunchtype off
 * sfc /scannow
 * chkdsk <drive>: /f (Fixes Errors Detected)
-* /r (Identifies Bad Sectors & Attempts Recovery of Information)
-* /I (Performs a Simpler Check of Index Entries)
-* /p (Performs an Exhaustive Check of the Current Disk)
-* /scan (Run online scan)
-* /forceofflinefix (Bypass online repair and queue defects for offline repair. Needs to be used along with /scan)
-* /perf (Perform the scan as fast as possible)
-* /spotfix (Perform spot repair in offline mode
-* /offlinescanandfix Run offline scan and perform fixes
-* /sdcclean Garbage collection
+* chkdsk <drive>: /r (Identifies Bad Sectors & Attempts Recovery of Information)
+* chkdsk <drive>: /I (Performs a Simpler Check of Index Entries)
+* chkdsk <drive>: /p (Performs an Exhaustive Check of the Current Disk)
+* chkdsk <drive>: /scan (Run online scan)
+* chkdsk <drive>: /forceofflinefix (Bypass online repair and queue defects for offline repair. Needs to be used along with /scan)
+* chkdsk <drive>: /perf (Perform the scan as fast as possible)
+* chkdsk <drive>: /spotfix (Perform spot repair in offline mode
+* chkdsk <drive>: /offlinescanandfix Run offline scan and perform fixes
+* chkdsk <drive>: /sdcclean Garbage collection
 Supported by Windows 10 on FAT/FAT32/exFAT volumes only:
-* /freeorphanedchains (Free up any orphaned cluster chains)
-* /markclean (Mark the volume clean if no corruption is detected)
+* chkdsk <drive>: /freeorphanedchains (Free up any orphaned cluster chains)
+* chkdsk <drive>: /markclean (Mark the volume clean if no corruption is detected)
 
 	Optimize Ethernet Network Settings (Windows)
 * Auto Disable Gigabit - Disable
