@@ -1,1 +1,1 @@
-# Adrian | AleyAnalytics
+# AleyAnalytics
